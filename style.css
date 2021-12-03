@@ -75,6 +75,12 @@ body{
       position: relative;
       left: 100%;
   }
+ @media screen and (min-width:998px) and (max-width:1100px) {
+    #header .logo a{
+        left: 50%;
+    }
+  }
+
   .fa-bars{
       text-align: center;
       color: white;
@@ -146,7 +152,7 @@ body{
   .nav-toggler span::after{
       top: 6px;
   }
-  @media(max-width: 991px){
+  @media(max-width: 1000px){
       .nav-toggler{
           display: flex;
       }
