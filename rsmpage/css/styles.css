@@ -23,7 +23,7 @@ Table Of Contents:
 
 /*****************************************
 Colors:
-- Backgrounds - light gray #f9fafe
+- Backgrounds -light gray #f9fafe
 - Headings text - black #191e47
 - Body text - dark gray #6c717b
 - Buttons, - blue #4555d2
@@ -101,6 +101,7 @@ ul{
 #header1 .nav ul li{
 	display: inline-block;
 	margin-left: 40px;
+	margin-right:3px;
 }
 #header1 .nav ul li a{
 	display: block;
