@@ -56,7 +56,7 @@ body{
   #header1 .nav{
       padding:0 10px;;
   }
-  #header1 .logo a{
+  #header1 .logo a{ 
       font-size: 30px;
       color: #ffffff;
       text-transform: capitalize;
