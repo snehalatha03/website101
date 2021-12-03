@@ -31,15 +31,15 @@ body{
   }
 
   .row1{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      background: #140B5C;
-      width: 100%;
-      position: relative;
-      top: 0px;
-      right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #140B5C;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    right: 0;
       padding: 10px;
   }
   /*header*/
