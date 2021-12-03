@@ -88,6 +88,7 @@ body{
   #header .nav ul li{
       display: inline-block;
       margin-left: 40px;
+      margin-right:3px;
   }
   #header .nav ul li a{
       display: block;
