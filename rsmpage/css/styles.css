@@ -140,7 +140,7 @@ body{
   .nav-toggler span::after{
       top: 6px;
   }
-  @media(max-width: 1000px){
+  @media(max-width: 1078px){
       .nav-toggler{
           display: flex;
       }
