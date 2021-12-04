@@ -34,7 +34,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+   
     background: #140B5C;
     width: 100%;
     position: relative;
@@ -140,10 +140,13 @@ body{
   .nav-toggler span::after{
       top: 6px;
   }
-  @media(max-width: 1078px){
+  @media(max-width: 998px){
       .nav-toggler{
           display: flex;
       }
+	  .row1{
+		   align-items: center;
+	  }
     #header1 .nav{
           position: absolute;
           left:50%;
