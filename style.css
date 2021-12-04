@@ -1392,13 +1392,19 @@ footer{
 .articlesslide {
     position: relative;
     width: 600px;
-  padding: 70px;
-    margin: 40px;
-
+  margin-left: 50px;
+    padding: 0px 70px;
 }
-@media screen and (max-width:570px){
+@media screen and (min-width:537px){
     .articlesslide{
-        margin:30px;  
+      margin-left: 50px;
+    padding: 0px 70px;
     }
 
+}
+@media screen and (max-width:448px)
+    {
+        .articlesslide{
+            padding:0px 10px;
+            margin:0px;
 }
