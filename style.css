@@ -1392,12 +1392,12 @@ footer{
 .articlesslide {
     position: relative;
     width: 600px;
-    margin: auto;
+    margin: 10em;
 
 }
-@media screen and (max-width:1075px){
+@media screen and (max-width:570px){
     .articlesslide{
-       
+        margin:30px;  
     }
 
 }
