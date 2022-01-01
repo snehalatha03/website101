@@ -8,18 +8,30 @@
     "https://static.thenounproject.com/png/1626808-200.png" 
         >
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="script.js">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
-    <title>Editorial</title>
- 
-    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="preload.css">
+      <script src="script.js"></script>
+      <title>Articles</title>
+      <style>
+        #preloader1{
+           padding-top: 50px;
+       }
+       footer{
+         margin-top: 10px;
+       }
+       </style>
 </head>
-<body>
+<body id="preloader">
+  <div id="preloader3">
+  <div id="loader"></div>
+  <div id="webname">Editorial</div>
+</div>
     <!--navbar start-->
-   
+    <section id="preloader1">
     <header id="header" class="">
         <div class="container101">
             <div class="row1 sticky">
@@ -99,24 +111,50 @@
                     <div class="caption"> <a href="">Everything you need to know about web technology</a></div>
                 </div>
             </div>
+            <div class="card1 card2">
+              <div class="img"><img src="https://images.pexels.com/photos/382297/pexels-photo-382297.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+              <div class="details1">
+                  <div class="time">
+                      <h2>11,October,2020
+                          <br>Snehalatha</h2>
+                  </div>
+                  <div class="caption"> <a href="">Everything you need to know about web technology</a></div>
+              </div>
+          </div>
+          <div class="card1 card2">
+              <div class="img"><img src="https://images.pexels.com/photos/382297/pexels-photo-382297.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+              <div class="details1">
+                  <div class="time">
+                      <h2>11,October,2020
+                          <br>Snehalatha</h2>
+                  </div>
+               <div class="caption"> <a href="">Everything you need to know about web technology</a></div>
+              </div>
+          </div>
+          <div class="card1 card2">
+              <div class="img"><img src="https://images.pexels.com/photos/382297/pexels-photo-382297.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+              <div class="details1">
+                  <div class="time">
+                      <h2>11,October,2020
+                          <br>Snehalatha</h2>
+                  </div>
+                  <div class="caption"> <a href="">Everything you need to know about web technology</a></div>
+              </div>
+          </div>
         </div>
         </div>
     </section>
-  <section class="slidearticle">
-    <nav  class="articlesslide"aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">Previous</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
-        </ul>
-      </nav>
-      </section>
+  <section>
+    <div class="alinks">
+      <div><a href="#"><i class="fa fa-arrow-left"></i></a></div>
+    <div><li class="pagelinks"><a href="#">1</li></a></div>
+    <div><li class="pagelinks"><a href="page2.html">2</li></a></div>
+    <div><li class="pagelinks"><a href="">3</li></a></div>
+    <div><li class="pagelinks"><a href="">4</li></a></div>
+    <div><a href="page2.html"><i class="fa fa-arrow-right"></i></a></div>
+    </div>
+  </section>
+  
       <footer>
         <div class="content">
           <div class="link-boxes">
@@ -152,6 +190,70 @@
           </div>
         </div>
       </footer>
+      </section>
 </body>
-<script src="script.js"></script>
+<script>
+const element = document.querySelector(".pagination ul");
+let totalPages = 5;
+let page = 5;
+//calling function with passing parameters and adding inside element which is ul tag
+element.innerHTML = createPagination(totalPages, page);
+function createPagination(totalPages, page){
+  let liTag = '';
+  let active;
+  let beforePage = page - 1;
+  let afterPage = page + 1;
+  if(page > 1){ //show the next button if the page value is greater than 1
+    liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${page - 1})"><span><i class="fa fa-angle-left"></i> Prev</span></li>`;
+  }
+  if(page > 2){ //if page value is less than 2 then add 1 after the previous button
+    liTag += `<li class="first numb" onclick="createPagination(totalPages, 1)"><span>1</span></li>`;
+    if(page > 3){ //if page value is greater than 3 then add this (...) after the first li or page
+      liTag += `<li class="dots"><span</span></li>`;
+    }
+  }
+  // how many pages or li show before the current li
+  if (page == totalPages) {
+    beforePage = beforePage - 2;
+  } else if (page == totalPages - 1) {
+    beforePage = beforePage - 1;
+  }
+  // how many pages or li show after the current li
+  if (page == 1) {
+    afterPage = afterPage + 2;
+
+  } else if (page == 2) {
+    afterPage  = afterPage + 1;
+  }
+  for (var plength = beforePage; plength <= afterPage; plength++) {
+    if (plength > totalPages) { //if plength is greater than totalPage length then continue
+      continue;
+    }
+    if (plength == 0) { //if plength is 0 than add +1 in plength value
+      plength = plength + 1;
+    }
+    if(page == plength){ //if page is equal to plength than assign active string in the active variable
+      active = "active";
+    }else{ //else leave empty to the active variable
+      active = "";
+    }
+    liTag += `<li class="numb ${active}" onclick="createPagination(totalPages, ${plength})"><span>${plength}</span></li>`;
+  }
+  if(page < totalPages - 1){ //if page value is less than totalPage value by -1 then show the last li or page
+    if(page < totalPages - 2){ //if page value is less than totalPage value by -2 then add this (...) before the last li or page
+      liTag += `<li class="dots"><span></span></li>`;
+    }
+    liTag += `<li class="last numb" onclick="createPagination(totalPages, ${totalPages})"><span>${totalPages}</span></li>`;
+  }
+  if (page < totalPages) { //show the next button if the page value is less than totalPage(20)
+    liTag += `<li class="btn next" onclick="createPagination(totalPages, ${page + 1})"><span>Next <i class="fa fa-angle-right"></i></span></li>`;
+  }
+  element.innerHTML = liTag; //add li tag inside ul tag
+  return liTag; //reurn the li tag
+}
+if(page==1){
+ innerHTML= alert("hello")
+ liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${page - 1})"><span><i class="fa fa-angle-left"></i> Prev</span></li>`;
+}
+</script>
 </html>
