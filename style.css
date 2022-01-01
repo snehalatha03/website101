@@ -76,6 +76,7 @@ body{
       font-size: 30px;
       text-transform: capitalize;
       position: relative;
+<<<<<<< HEAD
       color: #140B5C;
       font-weight: 1000;
       margin-left: 25px;
@@ -84,6 +85,16 @@ body{
 #header .logo{
     vertical-align: middle;
 }
+=======
+      left: 100%;
+  }
+ @media screen and (min-width:998px) and (max-width:1100px) {
+    #header .logo a{
+        left: 50%;
+    }
+  }
+
+>>>>>>> 83c4727ce30d2398a3f41cc0edceaf8c1bd4f57a
   .fa-bars{
       text-align: center;
       color: #ff656a;
@@ -96,7 +107,18 @@ body{
   }
   #header .nav ul li{
       display: inline-block;
+<<<<<<< HEAD
       margin-left: 35px;
+=======
+       margin-left: 40px;
+      text-align: center;
+      margin-right: 15px;
+  }
+ @media screen and (max-width:1100px) {
+    #header .nav ul li{
+        margin-right:0px;
+    }
+>>>>>>> 83c4727ce30d2398a3f41cc0edceaf8c1bd4f57a
   }
   #header .nav ul li a{
       display: block;
@@ -150,7 +172,7 @@ body{
   .nav-toggler span::after{
       top: 6px;
   }
-  @media(max-width: 991px){
+  @media(max-width: 1000px){
       .nav-toggler{
           display: flex;
       }
@@ -1271,6 +1293,10 @@ footer{
    
     width: 40px;
     margin: 0 8px;
+<<<<<<< HEAD
+=======
+    border-radius: 0px;
+>>>>>>> 83c4727ce30d2398a3f41cc0edceaf8c1bd4f57a
     text-align: center;
     line-height: 40px;
     color: #fff;
@@ -1464,9 +1490,10 @@ footer{
 .articlesslide {
     position: relative;
     width: 600px;
-    margin: auto;
-
+  margin-left: 50px;
+    padding: 0px 70px;
 }
+<<<<<<< HEAD
 .image12{
     width: fit-content;
 }
@@ -1639,6 +1666,12 @@ footer{
 @media screen and (max-width:480px) {
     .pagelinks a{
         width: 25px;
+=======
+@media screen and (min-width:537px){
+    .articlesslide{
+      margin-left: 50px;
+    padding: 0px 70px;
+>>>>>>> 83c4727ce30d2398a3f41cc0edceaf8c1bd4f57a
     }
 }
 .pagination{
@@ -1792,6 +1825,7 @@ footer{
 #contact1 h1{
     font-size: 2rem;
 }
+<<<<<<< HEAD
 @media screen and (max-width:768px) and (min-width:481px){
     .contactdetails{
        display: block;
@@ -1820,3 +1854,12 @@ footer{
        width: 100%;
     }
 }
+=======
+@media screen and (max-width:448px)
+    {
+        .articlesslide{
+            padding:40px;
+            margin:0px;
+}
+}
+>>>>>>> 83c4727ce30d2398a3f41cc0edceaf8c1bd4f57a

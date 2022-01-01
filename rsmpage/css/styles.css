@@ -1,51 +1,19 @@
-/* Description: Master CSS file */
-
-/*****************************************
-Table Of Contents:
-- General Styles
-- Navigation
-- Header
-- Statistics
-- Introduction
-- Details 1
-- Services
-- Details 2
-- Invitation
-- Projects
-- Testimonials
-- Contact
-- Footer
-- Copyright
-- Back To Top Button
-- Extra Pages
-- Media Queries
-******************************************/
-
-/*****************************************
-Colors:
-- Backgrounds - light gray #f9fafe
-- Headings text - black #191e47
-- Body text - dark gray #6c717b
-- Buttons, icons - blue #4555d2
-- Buttons, icons, bullets - red #cc2973
-******************************************/
-
-
-/**************************/
-/*     General Styles     */
-/**************************/
-
-body, p {
-	color: #6c717b; 
-	font: 400 1rem/1.625rem "Open Sans", sans-serif;
-	overflow-x: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Estonia&family=Genos:ital,wght@0,200;1,200&family=Montserrat:wght@600&family=Oswald:wght@500&family=PT+Serif:wght@700&family=Poppins&family=Roboto+Slab:wght@100&family=Roboto:wght@900&family=Ubuntu:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    
+    text-decoration:none;
+    list-style: none;
 }
-body{
-	max-width: 100%;
+html,body{
+    margin:0;
+    padding: 0;
+    overflow-x: hidden;
 }
-a{
-	text-decoration: none;
-}
+<<<<<<< HEAD
 ul{
 	list-style: none;
 	width: 100%;
@@ -203,6 +171,178 @@ ul{
   box-shadow: 0px 5px 10px 0px gray;
 }
 
+=======
+body{
+   
+    background: #f8fafe;
+}
+
+  a{
+      text-decoration: none;
+  }
+  ul{
+      list-style: none;
+      width: 100%;
+  }
+ #header1 .container101{
+      margin: 0px;
+      width: 100vw;
+  }
+
+  .row1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+    background: #140B5C;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    right: 0;
+      padding: 10px;
+  }
+  /*header*/
+  #header1{
+    background-color: #140B5C;
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+      top: 0;
+      height: 80px;
+      background: transparent;
+  }
+  #header1 .logo,
+  #header1 .nav{
+      padding:0 10px;;
+  }
+  #header1 .logo a{ 
+      font-size: 30px;
+      color: #ffffff;
+      text-transform: capitalize;
+      position: relative;
+      left: 100%;
+  }
+ @media screen and (min-width:998px) and (max-width:1100px) {
+    #header1 .logo a{
+        left: 50%;
+    }
+  }
+
+  .fa-bars{
+      text-align: center;
+      color: white;
+      font-size: 30px;
+  }
+  @media screen and (max-width:448px) {
+    #header1 .logo a{
+        left: 0px;
+    }
+  }
+  #header1 .nav ul li{
+      display: inline-block;
+       margin-left: 40px;
+      text-align: center;
+      margin-right: 15px;
+  }
+ @media screen and (max-width:1100px) {
+    #header1.nav ul li{
+        margin-right:0px;
+    }
+  }
+  #header1 nav ul li a{
+      display: block;
+      font-size: 16px;
+      padding:10px 0;
+      color: white;
+      text-transform: capitalize;
+      transition: all 0.5s ease;
+  }
+  #header1 .nav ul li a:hover,
+  #header1 .nav ul li a.active{
+      color: #ff656a;
+  }
+  #header1 #nav-check{
+      position: absolute;
+      opacity:0;
+      pointer-events: none;
+  }
+  .nav-toggler{
+      height: 34px;
+      width: 44px;
+   
+      border-radius: 4px;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+  }
+  .nav-toggler span{
+      display: block;
+      height: 2px;
+      width: 20px;
+      background-color:white;
+      position: relative;
+  }
+  .nav-toggler span::before,
+  .nav-toggler span::after{
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: white;
+     left:0;
+  }
+  .nav-toggler span::before{
+      top: -6px;
+  }
+  .nav-toggler span::after{
+      top: 6px;
+  }
+  @media(max-width: 998px){
+      .nav-toggler{
+          display: flex;
+      }
+	  .row1{
+		   align-items: center;
+	  }
+    #header1 .nav{
+          position: absolute;
+          left:50%;
+          top:100%;
+          width: 50%;
+          background-color:#140B5C;
+          border-top: 1px solid rgba(255,255,255,0.2);
+          opacity:0;
+          visibility: hidden;
+      }
+      #header1 .nav ul li{
+          display: block;
+          margin:0;
+          text-align: center;
+          color: black;
+      }
+      #header1 #nav-check:checked ~ .nav{
+         opacity: 1;
+         visibility: visible;
+      }
+      #header1 #nav-check:focus ~ .nav-toggler{
+          box-shadow: 0 0 15px #000000;
+      }
+      #header1 #nav-check:checked ~ .nav-toggler span{
+          background-color: transparent;
+      }
+      #header1 #nav-check:checked ~ .nav-toggler span::before{
+          top:0;
+          transform: rotate(45deg);
+      }
+      #header1 #nav-check:checked ~ .nav-toggler span::after{
+          top:0;
+          transform: rotate(-45deg);
+      }
+	  
+  }
+>>>>>>> 83c4727ce30d2398a3f41cc0edceaf8c1bd4f57a
 h1 {
 	color: #191e47;
 	font-weight: 700;
@@ -1663,7 +1803,7 @@ footer{
     height: 40px;
     width: 40px;
     margin: 0 8px;
-    border-radius: 50%;
+    border-radius: 0px;
     text-align: center;
     line-height: 40px;
     color: #fff;
@@ -1672,6 +1812,7 @@ footer{
     transition: all 0.4s ease;
     padding: 8px;
   
+	  
   }
   .top .media-icons a:nth-child(1){
     background: #4267B2;
